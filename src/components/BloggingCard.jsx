@@ -1,9 +1,11 @@
 import React from 'react'
 import { bloggingData } from '../data'
+import { Link } from 'react-router-dom'
 function BloggingCard({blog}) {
     console.log(bloggingData)
   return (
-    <div className=' rounded-md shadow-lg p-4 w-[300px]  bg-[#291b1b] cursor-pointer hover:scale-105 hover:brightness-90 h-fit'>
+    <Link to={`/blogging/${blog.id}`}>
+        <div className=' rounded-md shadow-lg p-4 w-[300px]  bg-[#291b1b] cursor-pointer hover:scale-105 hover:brightness-90 h-fit'>
         <img src={blog.img} className='w-full h-[250px] object-cover' alt="" />
         <h1 className='text-xl font-semibold truncate'>{blog.title}</h1>
         <div className='flex justify-between mt-2'>
@@ -13,6 +15,7 @@ function BloggingCard({blog}) {
         </div>
 
     </div>
+    </Link>
   )
 }
 
