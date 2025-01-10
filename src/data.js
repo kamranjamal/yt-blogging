@@ -1,4 +1,4 @@
-[
+export const bloggingData=[
     {
       "id": 1,
       "title": "Top 10 JavaScript Frameworks in 2025",
